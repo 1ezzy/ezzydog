@@ -11,16 +11,20 @@
 	<div class="flex flex-col items-center justify-center basis-1/2">
 		<p class="text-xl tracking-wider">welcome to</p>
 		<h1 class="text-5xl tracking-wider mb-8">ezzy.dog</h1>
-		<img class="w-full max-w-4xl" src={guitar} alt="ezzy playing guitar" />
+		<img
+			class="w-full lg:max-w-lg max-w-4xl aspect-square"
+			src={guitar}
+			alt="ezzy playing guitar"
+		/>
 	</div>
 	<div class="w-16"></div>
 	<div class="flex flex-col items-center basis-1/2">
-		<h1 class="text-5xl tracking-wider underline mb-16">my projects</h1>
+		<h1 class="lg:text-4xl text-5xl tracking-wider underline mb-16">my projects</h1>
 		<div class="w-full flex-1">
 			<div class="project mb-16">
 				<div class="flex justify-between mb-2">
 					<div class="flex flex-col">
-						<h3 class="text-4xl">cauldron</h3>
+						<h3 class="lg:text-3xl text-4xl">cauldron</h3>
 					</div>
 					<div class="flex flex-col gap-4">
 						<button class="nav-btn">Go To Website</button>
@@ -47,7 +51,7 @@
 			<div class="project">
 				<div class="flex justify-between mb-4">
 					<div class="flex flex-col">
-						<h3 class="text-4xl">the paper earth</h3>
+						<h3 class="lg:text-3xl text-4xl">the paper earth</h3>
 					</div>
 					<div class="flex flex-col gap-4">
 						<button class="nav-btn">Go To Website</button>
