@@ -7,8 +7,8 @@
 	import photos from '$lib/images/photos.png';
 </script>
 
-<main class="h-full w-full p-10 flex flex-1">
-	<div class="flex flex-col items-center justify-center basis-1/2">
+<main class="h-full w-full p-10 flex md:flex-row flex-col flex-1">
+	<div class="p-4 flex flex-col items-center justify-center basis-1/2">
 		<p class="text-xl tracking-wider">welcome to</p>
 		<h1 class="text-5xl tracking-wider mb-8">ezzy.dog</h1>
 		<img
@@ -17,18 +17,18 @@
 			alt="ezzy playing guitar"
 		/>
 	</div>
-	<div class="w-16"></div>
-	<div class="flex flex-col items-center basis-1/2">
+	<div class="md:w-16"></div>
+	<div class="p-4 flex flex-col items-center basis-1/2 md:overflow-y-auto">
 		<h1 class="lg:text-4xl text-5xl tracking-wider underline mb-16">my projects</h1>
 		<div class="w-full flex-1">
 			<div class="project mb-16">
-				<div class="flex justify-between mb-2">
+				<div class="flex md:flex-row flex-col md:justify-between justify-center mb-8">
 					<div class="flex flex-col">
-						<h3 class="lg:text-3xl text-4xl">cauldron</h3>
+						<h3 class="md:text-3xl text-2xl md:mb-0 mb-4">cauldron</h3>
 					</div>
-					<div class="flex flex-col gap-4">
-						<button class="nav-btn">Go To Website</button>
-						<button class="ml-auto w-fit nav-btn">View on GitHub</button>
+					<div class="flex gap-4">
+						<button class="nav-btn md:text-md text-sm">Go To Website</button>
+						<button class="md:ml-auto nav-btn md:text-md text-sm">View on GitHub</button>
 					</div>
 				</div>
 				<div class="flex justify-between mb-4">
@@ -44,18 +44,18 @@
 					/>
 					<img class="m-2 basis-1/3 w-1/3 aspect-square rounded-xl" src={cards} alt="spell table" />
 				</div>
-				<p class="text-xl">
+				<p class="md:text-xl text-md">
 					cauldron is an open source platform to explore, learn, and save collections of 5e spells.
 				</p>
 			</div>
 			<div class="project">
-				<div class="flex justify-between mb-4">
+				<div class="flex md:flex-row flex-col justify-between mb-8">
 					<div class="flex flex-col">
-						<h3 class="lg:text-3xl text-4xl">the paper earth</h3>
+						<h3 class="md:text-3xl text-2xl md:mb-0 mb-4">the paper earth</h3>
 					</div>
-					<div class="flex flex-col gap-4">
-						<button class="nav-btn">Go To Website</button>
-						<button class="ml-auto w-fit nav-btn">View on GitHub</button>
+					<div class="flex gap-4">
+						<button class="nav-btn md:text-md text-sm">Go To Website</button>
+						<button class="md:ml-auto nav-btn md:text-md text-sm">View on GitHub</button>
 					</div>
 				</div>
 				<div class="flex justify-between mb-4">
@@ -70,7 +70,9 @@
 						alt="band photos"
 					/>
 				</div>
-				<p class="text-xl">website for the paper earth, an alt-punk band from cincinnati, OH!</p>
+				<p class="md:text-xl text-md">
+					website for the paper earth, an alt-punk band from cincinnati, OH!
+				</p>
 			</div>
 		</div>
 	</div>
@@ -86,5 +88,12 @@
 		padding: 8px 12px;
 		border-radius: 16px;
 		background-color: #ffb1b1;
+	}
+
+	@media (max-width: 768px) {
+		.nav-btn {
+			padding: 4px 8px;
+			width: fit-content;
+		}
 	}
 </style>
