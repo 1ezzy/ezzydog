@@ -71,7 +71,7 @@
 				</div>
 			</div>
 			<div class="project">
-				<div class="flex md:flex-row flex-col justify-between">
+				<div class="flex md:flex-row flex-col md:justify-between justify-center">
 					<div class="flex flex-col">
 						<h3 class="md:text-3xl text-2xl md:mb-0 mb-4">The Paper Earth</h3>
 					</div>
