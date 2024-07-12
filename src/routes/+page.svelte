@@ -8,7 +8,7 @@
 </script>
 
 <main class="w-full md:p-10 p-2 flex flex-col flex-1 gap-8">
-	<section class="h-[calc(100dvh_-_40px)] flex md:flex-row flex-col items-center justify-center">
+	<section class="h-[calc(100lvh_-_40px)] flex md:flex-row flex-col items-center justify-center">
 		<img
 			class="w-full md:max-w-lg max-w-1/2 aspect-square md:basis-1/2"
 			src={guitar}
