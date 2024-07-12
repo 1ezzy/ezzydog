@@ -45,8 +45,12 @@
 						<h3 class="md:text-3xl text-2xl md:mb-0 mb-4">Cauldron</h3>
 					</div>
 					<div class="flex md:flex-row flex-col gap-4">
-						<button class="nav-btn md:text-md text-sm">Go To Website</button>
-						<button class="md:ml-auto nav-btn md:text-md text-sm">View on GitHub</button>
+						<a href="https://cauldron.ezzy.dog">
+							<button class="nav-btn md:text-md text-sm">Go To Website</button>
+						</a>
+						<a href="https://github.com/1ezzy/cauldron">
+							<button class="md:ml-auto nav-btn md:text-md text-sm">View on GitHub</button>
+						</a>
 					</div>
 				</div>
 				<p class="md:text-xl text-md">
@@ -76,8 +80,9 @@
 						<h3 class="md:text-3xl text-2xl md:mb-0 mb-4">The Paper Earth</h3>
 					</div>
 					<div class="flex gap-4">
-						<button class="nav-btn md:text-md text-sm">Go To Website</button>
-						<button class="md:ml-auto nav-btn md:text-md text-sm">View on GitHub</button>
+						<a href="https://thepaperearth.com">
+							<button class="nav-btn md:text-md text-sm">Go To Website</button>
+						</a>
 					</div>
 				</div>
 				<p class="md:text-xl text-md">The Paper Earth is an alt-punk band from Cincinnati, OH!</p>
