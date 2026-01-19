@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@lucide/svelte':
+        specifier: ^0.562.0
+        version: 0.562.0(svelte@5.47.0)
       svelte-ux:
         specifier: 2.0.0-next.21
         version: 2.0.0-next.21(postcss-load-config@3.1.4(postcss@8.5.6))(postcss@8.5.6)(svelte@5.47.0)
@@ -346,6 +349,11 @@ packages:
 
   '@lucide/svelte@0.544.0':
     resolution: {integrity: sha512-9f9O6uxng2pLB01sxNySHduJN3HTl5p0HDu4H26VR51vhZfiMzyOMe9Mhof3XAk4l813eTtl+/DYRvGyoRR+yw==}
+    peerDependencies:
+      svelte: ^5
+
+  '@lucide/svelte@0.562.0':
+    resolution: {integrity: sha512-wDMULwtTFN2Sc/TFBm6gfuVCNb4Y5P9LDrwxNnUbV52+IEU7NXZmvxwXoz+vrrpad6Xupq+Hw5eUlqIHEGhouw==}
     peerDependencies:
       svelte: ^5
 
@@ -1851,6 +1859,10 @@ snapshots:
       lodash-es: 4.17.22
 
   '@lucide/svelte@0.544.0(svelte@5.47.0)':
+    dependencies:
+      svelte: 5.47.0
+
+  '@lucide/svelte@0.562.0(svelte@5.47.0)':
     dependencies:
       svelte: 5.47.0
 

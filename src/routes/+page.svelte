@@ -1,7 +1,13 @@
+<script>
+	import AboutMe from '$lib/components/AboutMe.svelte';
+	import HeroSection from '$lib/components/HeroSection.svelte';
+</script>
+
 <svelte:head>
 	<title>home | ezzy.dog</title>
 </svelte:head>
 
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<main class="w-full flex flex-col gap-32">
+	<HeroSection />
+	<AboutMe />
+</main>
