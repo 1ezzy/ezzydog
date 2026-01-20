@@ -12,6 +12,10 @@
 
 <div class="flex min-h-screen">
 	<img src="images/flowers.png" alt="flowers" class="object-cover absolute -top-16" />
+	<div class="absolute flex flex-col top-[calc(100vh-64px)] p-4">
+		<span class="text-xs" in:fade={{ duration: 200, delay: 50 }}>powered by ezzy!</span>
+		<span class="text-xs" in:fade={{ duration: 200, delay: 50 }}>Images © Wannapa Kaewluan</span>
+	</div>
 	<div class="w-full flex flex-col items-center justify-center gap-12">
 		{#if mounted}
 			<h1
