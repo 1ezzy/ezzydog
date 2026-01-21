@@ -15,6 +15,28 @@
 
 :root {
 	font-family: 'Gamja Flower';
+
+	@media (min-width: 1536px) {
+		.text-xs {
+			font-size: 24px;
+			line-height: 32px;
+		}
+
+		.text-xl {
+			font-size: 40px;
+			line-height: 56px;
+		}
+
+		.text-4xl {
+			font-size: 72px;
+			line-height: 80px;
+		}
+
+		.text-8xl {
+			font-size: 192px;
+			line-height: 216px;
+		}
+	}
 }
 
 html {

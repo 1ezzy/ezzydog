@@ -1,14 +1,16 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
+	import { MediaQuery } from 'svelte/reactivity';
+	import { Tilt } from 'svelte-ux';
 	import { ArrowBigDown } from '@lucide/svelte';
 	import { intersectionObserverAttachment } from '$lib/utils/attachments';
 
 	import flowers from '$lib/assets/flowers.png';
-	import { Tilt } from 'svelte-ux';
 
 	let mounted = $state(false);
 	let footerEl: Element | undefined = $state();
+
+	const large = new MediaQuery('min-width: 1536px');
 
 	const handleTitleIntersection = (entry: IntersectionObserverEntry) => {
 		if (entry.isIntersecting) {
@@ -48,7 +50,7 @@
 		{@attach intersectionObserverAttachment(handleFlowersIntersection)}
 	/>
 	<div
-		class="absolute top-[calc(100vh-64px)] flex flex-col p-4 opacity-100 transition duration-600 ease-in-out"
+		class="absolute top-[calc(100vh-64px)] flex flex-col p-4 opacity-100 transition duration-600 ease-in-out 2xl:top-[calc(100vh-128px)] 2xl:p-8"
 		bind:this={footerEl}
 	>
 		<span class="text-xs">powered by ezzy!</span>
@@ -70,7 +72,7 @@
 
 			<h3 class="text-xl">scroll down to learn about me and some of my projects!</h3>
 			<a href="#about" aria-label="Scroll to About Me" class="text-violet-400">
-				<ArrowBigDown />
+				<ArrowBigDown size={large ? 64 : 32} />
 			</a>
 		</div>
 	</div>
