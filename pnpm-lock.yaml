@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@layerstack/tailwind':
+        specifier: 2.0.0-next.22
+        version: 2.0.0-next.22
+      '@layerstack/utils':
+        specifier: 2.0.0-next.18
+        version: 2.0.0-next.18
       '@lucide/svelte':
         specifier: ^0.562.0
         version: 0.562.0(svelte@5.47.0)
@@ -344,8 +350,14 @@ packages:
   '@layerstack/tailwind@2.0.0-next.19':
     resolution: {integrity: sha512-ITnwo/CdV5h5N0iSss5WoZKIjF1xxOzaO+v82Th8t+OPSYUz0SzrpwEViQ+36Zty+zeYRvRYfyGDwV4h1Hxnww==}
 
+  '@layerstack/tailwind@2.0.0-next.22':
+    resolution: {integrity: sha512-IRp2yvZE7rPPKIt7rWcfm7PtSUAorpqexP73Set39iRS0POOHFqfD6pbV5If1eHMewAdk3xgEQ5QLoz3CPUiHQ==}
+
   '@layerstack/utils@2.0.0-next.16':
     resolution: {integrity: sha512-V0aTlVpEylaVgwUOrVhMcEVAN8ysChP1Y4uPCcohl048Ocv+h37eW67pVxj81c+aLAavCd3BXt9IhJfELqTVmw==}
+
+  '@layerstack/utils@2.0.0-next.18':
+    resolution: {integrity: sha512-EYILHpfBRYMMEahajInu9C2AXQom5IcAEdtCeucD3QIl/fdDgRbtzn6/8QW9ewumfyNZetdUvitOksmI1+gZYQ==}
 
   '@lucide/svelte@0.544.0':
     resolution: {integrity: sha512-9f9O6uxng2pLB01sxNySHduJN3HTl5p0HDu4H26VR51vhZfiMzyOMe9Mhof3XAk4l813eTtl+/DYRvGyoRR+yw==}
@@ -1845,10 +1857,17 @@ snapshots:
 
   '@layerstack/tailwind@2.0.0-next.19':
     dependencies:
-      '@layerstack/utils': 2.0.0-next.16
+      '@layerstack/utils': 2.0.0-next.18
       clsx: 2.1.1
       d3-array: 3.2.4
       lodash-es: 4.17.22
+      tailwind-merge: 3.4.0
+
+  '@layerstack/tailwind@2.0.0-next.22':
+    dependencies:
+      '@layerstack/utils': 2.0.0-next.18
+      clsx: 2.1.1
+      d3-array: 3.2.4
       tailwind-merge: 3.4.0
 
   '@layerstack/utils@2.0.0-next.16':
@@ -1857,6 +1876,12 @@ snapshots:
       d3-time: 3.1.0
       d3-time-format: 4.1.0
       lodash-es: 4.17.22
+
+  '@layerstack/utils@2.0.0-next.18':
+    dependencies:
+      d3-array: 3.2.4
+      d3-time: 3.1.0
+      d3-time-format: 4.1.0
 
   '@lucide/svelte@0.544.0(svelte@5.47.0)':
     dependencies:

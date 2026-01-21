@@ -2,8 +2,37 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { ArrowBigDown } from '@lucide/svelte';
+	import { intersectionObserverAttachment } from '$lib/utils/attachments';
+
+	import flowers from '$lib/assets/flowers.png';
+	import { Tilt } from 'svelte-ux';
 
 	let mounted = $state(false);
+	let footerEl: Element | undefined = $state();
+
+	const handleTitleIntersection = (entry: IntersectionObserverEntry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('opacity-100');
+			entry.target.classList.remove('opacity-0');
+		} else {
+			entry.target.classList.add('opacity-0');
+			entry.target.classList.remove('opacity-100');
+		}
+	};
+
+	const handleFlowersIntersection = (entry: IntersectionObserverEntry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('opacity-100');
+			entry.target.classList.remove('opacity-0');
+			footerEl?.classList.add('opacity-100');
+			footerEl?.classList.remove('opacity-0');
+		} else {
+			entry.target.classList.add('opacity-0');
+			entry.target.classList.remove('opacity-100');
+			footerEl?.classList.add('opacity-0');
+			footerEl?.classList.remove('opacity-100');
+		}
+	};
 
 	onMount(() => {
 		mounted = true;
@@ -11,23 +40,32 @@
 </script>
 
 <div class="flex min-h-screen">
-	<img src="images/flowers.png" alt="flowers" class="object-cover absolute -top-16" />
-	<div class="absolute flex flex-col top-[calc(100vh-64px)] p-4">
-		<span class="text-xs" in:fade={{ duration: 200, delay: 50 }}>powered by ezzy!</span>
-		<span class="text-xs" in:fade={{ duration: 200, delay: 50 }}>Images © Wannapa Kaewluan</span>
+	<img
+		id="flowers"
+		src={flowers}
+		alt="flowers"
+		class="absolute -top-16 object-cover transition duration-600 ease-in-out"
+		{@attach intersectionObserverAttachment(handleFlowersIntersection)}
+	/>
+	<div
+		class="absolute top-[calc(100vh-64px)] flex flex-col p-4 opacity-100 transition duration-600 ease-in-out"
+		bind:this={footerEl}
+	>
+		<span class="text-xs">powered by ezzy!</span>
+		<span class="text-xs">Images © Wannapa Kaewluan</span>
 	</div>
-	<div class="w-full flex flex-col items-center justify-center gap-12">
-		{#if mounted}
+	<div class="flex w-full flex-col items-center justify-center gap-12">
+		<Tilt class="transition duration-500 hover:scale-110">
 			<h1
-				class="text-8xl font-bagel bg-linear-to-r from-violet-300 via-violet-400 to-violet-500 bg-clip-text text-transparent p-4 my-8"
-				in:fade={{ duration: 500, delay: 50 }}
+				class="font-bagel my-8 w-fit bg-linear-to-r from-violet-300 via-violet-400 to-violet-500 bg-clip-text p-4 text-8xl text-transparent transition duration-600 ease-in-out"
+				class:opacity-100={mounted}
+				class:opacity-0={!mounted}
+				{@attach intersectionObserverAttachment(handleTitleIntersection)}
 			>
 				ezzy.dog
 			</h1>
-		{:else}
-			<h1 class="text-8xl font-bagel p-4 invisible my-8">ezzy.dog</h1>
-		{/if}
-		<div class="w-full flex flex-col items-center justify-center gap-4">
+		</Tilt>
+		<div class="flex w-full flex-col items-center justify-center gap-4">
 			<h2 class="text-4xl">a portfolio project by Jordan</h2>
 
 			<h3 class="text-xl">scroll down to learn about me and some of my projects!</h3>

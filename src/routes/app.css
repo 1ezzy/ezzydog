@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
 @import 'tailwindcss';
+
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@import '@layerstack/tailwind/core.css';
+@import '@layerstack/tailwind/utils.css';
+@import '@layerstack/tailwind/themes/all.css';
+
+@source '../../node_modules/svelte-ux/dist';
+@source '../../node_modules/layerchart/dist';
 
 :root {
 	font-family: 'Gamja Flower';
