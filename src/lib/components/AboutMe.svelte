@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { MediaQuery } from 'svelte/reactivity';
-	import { Github, Linkedin, Mail } from '@lucide/svelte';
+	import { ArrowBigDown, Github, Linkedin, Mail } from '@lucide/svelte';
+	import { intersectionObserverAttachment } from '$lib/utils/attachments';
 
 	import flower2 from '$lib/assets/flower2.png';
-	import { intersectionObserverAttachment } from '$lib/utils/attachments';
 
 	const large = new MediaQuery('min-width: 1536px');
 
@@ -18,10 +18,10 @@
 	};
 </script>
 
-<div class="flex h-screen w-full flex-col p-16 2xl:p-32">
+<div class="flex min-h-screen w-full flex-col p-16 pt-0 2xl:p-32">
 	<div class="mb-16 flex flex-row items-center justify-between">
-		<h2 id="about" class="text-4xl">About Me</h2>
-		<div class="flex flex-row items-center gap-8">
+		<h2 id="about" class="pt-16 text-6xl">About Me</h2>
+		<div class="flex flex-row items-center gap-8 pt-16">
 			<a
 				class="flex flex-row items-center gap-4 rounded-full p-4 transition delay-200 duration-400 ease-in-out hover:bg-rose-300"
 				href="https://www.linkedin.com/in/jordan-myers-366067184/"
@@ -61,21 +61,24 @@
 	>
 		<div class="absolute left-0 h-4/5 w-full rounded-full bg-violet-400"></div>
 		<div
-			class="absolute left-0 flex aspect-square h-9/10 flex-col items-center justify-center gap-8 rounded-full border-2 border-white bg-violet-300 px-24 2xl:gap-16 2xl:border-4 2xl:px-32"
+			class="absolute left-0 flex aspect-square h-9/10 flex-col items-center justify-center gap-8 rounded-full border-2 border-white bg-violet-300 px-24 2xl:gap-16 2xl:border-4 2xl:px-64"
 		>
-			<span class="text-xl">
+			<span class="font-cal text-md">
 				I'm a front-end developer with a passion for building intuitive, robust interfaces and
 				tackling any technical challenges I can. I love taking on new projects as a way to learn and
 				enjoy exploring new ideas by writing code!
 			</span>
-			<span class="text-xl">
+			<span class="font-cal text-md">
 				Check out my resume and some of my favorite technologies to the right along with some of the
 				projects I have developed below!</span
 			>
+			<a href="#projects" aria-label="Scroll to Projects" class="text-violet-400">
+				<ArrowBigDown size={large ? 48 : 24} />
+			</a>
 			<img
 				src={flower2}
 				alt="separating flower"
-				class="absolute top-1/2 right-[-128px] z-10 w-32 -translate-x-1/2 -translate-y-1/2"
+				class="absolute top-1/2 -right-32 z-10 w-32 -translate-x-1/2 -translate-y-1/2"
 			/>
 		</div>
 	</div>

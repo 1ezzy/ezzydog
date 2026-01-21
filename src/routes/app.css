@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
 
 @import 'tailwindcss';
 
@@ -22,6 +23,11 @@
 			line-height: 32px;
 		}
 
+		.text-md {
+			font-size: 32px;
+			line-height: 48px;
+		}
+
 		.text-xl {
 			font-size: 40px;
 			line-height: 56px;
@@ -30,6 +36,11 @@
 		.text-4xl {
 			font-size: 72px;
 			line-height: 80px;
+		}
+
+		.text-6xl {
+			font-size: 120px;
+			line-height: 132px;
 		}
 
 		.text-8xl {
@@ -45,4 +56,8 @@ html {
 
 .font-bagel {
 	font-family: 'Bagel Fat One';
+}
+
+.font-cal {
+	font-family: 'Cal Sans';
 }
