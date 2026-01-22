@@ -9,7 +9,7 @@
 
 <div class="flex min-h-screen w-full flex-col p-16 pt-0 2xl:p-32">
 	<div class="mb-16 flex flex-row items-center justify-between">
-		<h2 id="projects" class="pt-16 text-4xl">My Projects</h2>
+		<h2 id="projects" class="pt-16 text-6xl">My Projects</h2>
 	</div>
 	<div class="h-screen"></div>
 </div>

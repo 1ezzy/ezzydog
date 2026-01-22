@@ -2,12 +2,11 @@
 	import { onMount } from 'svelte';
 	import { MediaQuery } from 'svelte/reactivity';
 	import { Tilt } from 'svelte-ux';
-	import { ArrowBigDown } from '@lucide/svelte';
+	import { ArrowBigDown, CornerLeftUp } from '@lucide/svelte';
 	import { intersectionObserverAttachment } from '$lib/utils/attachments';
 
 	import flowers from '$lib/assets/flowers.png';
 
-	let mounted = $state(false);
 	let footerEl: Element | undefined = $state();
 
 	const large = new MediaQuery('min-width: 1536px');
@@ -35,10 +34,6 @@
 			footerEl?.classList.remove('opacity-100');
 		}
 	};
-
-	onMount(() => {
-		mounted = true;
-	});
 </script>
 
 <div class="flex min-h-screen">
@@ -57,16 +52,20 @@
 		<span class="text-xs">Images © Wannapa Kaewluan</span>
 	</div>
 	<div class="flex w-full flex-col items-center justify-center gap-12">
-		<Tilt class="transition duration-500 hover:scale-110">
-			<h1
-				class="font-bagel my-8 w-fit bg-linear-to-r from-violet-300 via-violet-400 to-violet-500 bg-clip-text p-4 text-8xl text-transparent transition duration-600 ease-in-out"
-				class:opacity-100={mounted}
-				class:opacity-0={!mounted}
-				{@attach intersectionObserverAttachment(handleTitleIntersection)}
-			>
-				ezzy.dog
-			</h1>
-		</Tilt>
+		<div class="relative">
+			<Tilt class="transition duration-500 hover:scale-110">
+				<h1
+					class="font-bagel my-8 w-fit bg-linear-to-r from-violet-300 via-violet-400 to-violet-500 bg-clip-text p-4 text-8xl text-transparent transition ease-out"
+					{@attach intersectionObserverAttachment(handleTitleIntersection)}
+				>
+					ezzy.dog
+				</h1>
+			</Tilt>
+			<div class="absolute bottom-4 left-2/3 flex h-6 items-center gap-2 2xl:h-10">
+				<CornerLeftUp size={large ? 16 : 8} />
+				<span class="self-end text-xs">(hover me!)</span>
+			</div>
+		</div>
 		<div class="flex w-full flex-col items-center justify-center gap-4">
 			<h2 class="text-4xl">a portfolio project by Jordan</h2>
 
@@ -77,3 +76,6 @@
 		</div>
 	</div>
 </div>
+
+<style>
+</style>

@@ -14,6 +14,10 @@
 @source '../../node_modules/svelte-ux/dist';
 @source '../../node_modules/layerchart/dist';
 
+@utility no-scrollbar {
+	@apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
 :root {
 	font-family: 'Gamja Flower';
 
@@ -31,6 +35,11 @@
 		.text-xl {
 			font-size: 40px;
 			line-height: 56px;
+		}
+
+		.text-2xl {
+			font-size: 48px;
+			line-height: 64px;
 		}
 
 		.text-4xl {

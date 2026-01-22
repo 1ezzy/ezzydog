@@ -22,7 +22,7 @@
 	<img
 		src={flower3}
 		alt="second separating flower"
-		class="absolute top-[calc(200vh+128px)] left-1/2 z-10 w-32 -translate-x-1/2 -translate-y-1/2"
+		class="absolute top-[calc(200vh+160px)] left-1/2 z-10 w-32 -translate-x-1/2 -translate-y-1/2"
 	/>
 	<Projects />
 </main>
