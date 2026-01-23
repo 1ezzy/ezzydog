@@ -70,14 +70,14 @@
 				<span class="self-end text-xs">(hover me!)</span>
 			</div>
 		</div>
-		<div class="flex w-full flex-col items-center justify-center gap-4">
+		<div class="flex w-full flex-col items-center justify-center gap-2">
 			<h2 class="text-4xl">a portfolio project by Jordan</h2>
 
-			<h3 class="text-xl">scroll down to learn about me and some of my projects!</h3>
+			<h3 class="text-xl">click the arrow to learn more about me and some of my projects!</h3>
 			<a
 				href="#about"
 				aria-label="Scroll to About Me"
-				class="mt-4 flex items-center rounded-full p-2 text-violet-400 hover-fade-in hover:bg-violet-400 hover:text-white 3xl:mt-8"
+				class="mt-4 flex animate-pulse items-center rounded-full p-2 text-violet-400 hover-fade-in hover:animate-none hover:bg-violet-400 hover:text-white 3xl:mt-8"
 			>
 				<ArrowBigDown size={arrowSize()} />
 			</a>

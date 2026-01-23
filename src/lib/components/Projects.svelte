@@ -8,7 +8,7 @@
 	const xlarge = new MediaQuery('min-width: 2560px');
 </script>
 
-<div class="flex min-h-screen w-full flex-col p-16 pt-0 3xl:p-32">
+<div class="section-wrapper">
 	<div class="mb-16 flex flex-row items-center justify-between">
 		<h2 id="projects" class="pt-16 text-4xl">My Projects</h2>
 	</div>
