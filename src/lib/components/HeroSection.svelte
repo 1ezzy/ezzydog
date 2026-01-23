@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { MediaQuery } from 'svelte/reactivity';
 	import { Tilt } from 'svelte-ux';
 	import { ArrowBigDown, CornerLeftUp } from '@lucide/svelte';
@@ -77,13 +76,10 @@
 			<a
 				href="#about"
 				aria-label="Scroll to About Me"
-				class="mt-4 flex animate-pulse items-center rounded-full p-2 text-violet-400 hover-fade-in hover:animate-none hover:bg-violet-400 hover:text-white 3xl:mt-8"
+				class="mt-4 flex animate-pulse items-center rounded-full p-2 text-violet-400 hover-fade-in hover:animate-none hover:bg-violet-400 hover:text-white 3xl:mt-8 3xl:p-4"
 			>
 				<ArrowBigDown size={arrowSize()} />
 			</a>
 		</div>
 	</div>
 </div>
-
-<style>
-</style>

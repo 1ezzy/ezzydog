@@ -59,9 +59,13 @@
 			<a
 				href="#projects"
 				aria-label="Scroll to Projects"
-				class="flex flex-1 animate-pulse items-center justify-center rounded-full p-2 text-violet-200 hover-fade-in hover:animate-none hover:bg-violet-300 hover:text-white"
+				class="flex flex-1 items-center justify-center"
 			>
-				<ArrowBigDown size={arrowSize()} />
+				<span
+					class="animate-pulse rounded-full p-2 text-white hover-fade-in hover:animate-none hover:bg-violet-300 3xl:p-4"
+				>
+					<ArrowBigDown size={arrowSize()} />
+				</span>
 			</a>
 		</div>
 	</div>
