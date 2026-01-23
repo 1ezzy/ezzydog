@@ -16,7 +16,7 @@
 
 	const arrowSize = $derived(() => (xlarge.current ? 64 : large.current ? 48 : 32));
 
-	const images = [
+	const images: { src: string; alt: string; name: string }[] = [
 		{ src: pnpmlogo, alt: 'logo for pnpm', name: 'pnpm' },
 		{ src: sveltelogo, alt: 'logo for svelte', name: 'Svelte' },
 		{ src: tailwindlogo, alt: 'logo for tailwindcss', name: 'Tailwind CSS' },
@@ -104,7 +104,7 @@
 			</div>
 		</div>
 		<img
-			class="absolute top-1/2 -right-[10vw] z-10 w-[10vw] -translate-x-1/2 -translate-y-1/2"
+			class="absolute top-1/2 -right-[7vw] z-10 w-[7vw] -translate-x-1/2 -translate-y-1/2"
 			src={flower2}
 			alt="separating flower"
 		/>
