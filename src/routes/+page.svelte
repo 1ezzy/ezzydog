@@ -11,7 +11,7 @@
 	<title>home | ezzy.dog</title>
 </svelte:head>
 
-<main class="relative flex w-full flex-col gap-32">
+<main class="relative flex w-full flex-col gap-32 3xl:gap-64">
 	<HeroSection />
 	<img
 		src={flower1}
@@ -22,7 +22,7 @@
 	<img
 		src={flower3}
 		alt="second separating flower"
-		class="absolute top-[calc(215vh)] left-1/2 z-10 w-[10vw] -translate-x-1/2 -translate-y-1/2"
+		class="absolute top-[calc(200vh+8rem)] left-1/2 z-10 w-[7vw] -translate-x-1/2 -translate-y-1/2 3xl:top-[calc(200vh+16rem)]"
 	/>
 	<Projects />
 </main>
