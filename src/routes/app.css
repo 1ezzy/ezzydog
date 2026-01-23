@@ -18,13 +18,65 @@
 	@apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
 }
 
+@theme {
+	--breakpoint-3xl: 120rem;
+	--breakpoint-4xl: 160rem;
+}
+
 :root {
 	font-family: 'Gamja Flower';
 
-	@media (min-width: 1536px) {
+	@media (min-width: 1920px) {
+		.text-xs {
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		.text-sm {
+			font-size: 21px;
+			line-height: 30px;
+		}
+
+		.text-md {
+			font-size: 24px;
+			line-height: 36px;
+		}
+
+		.text-xl {
+			font-size: 30px;
+			line-height: 42px;
+		}
+
+		.text-2xl {
+			font-size: 36px;
+			line-height: 48px;
+		}
+
+		.text-4xl {
+			font-size: 54px;
+			line-height: 60px;
+		}
+
+		.text-6xl {
+			font-size: 90px;
+			line-height: 99px;
+		}
+
+		.text-8xl {
+			font-size: 144px;
+			line-height: 162px;
+		}
+	}
+
+	@media (min-width: 2560px) {
 		.text-xs {
 			font-size: 24px;
 			line-height: 32px;
+		}
+
+		.text-sm {
+			font-size: 28px;
+			line-height: 40px;
 		}
 
 		.text-md {
@@ -55,6 +107,48 @@
 		.text-8xl {
 			font-size: 192px;
 			line-height: 216px;
+		}
+	}
+
+	@media (min-width: 3840px) {
+		.text-xs {
+			font-size: 36px;
+			line-height: 48px;
+		}
+
+		.text-sm {
+			font-size: 42px;
+			line-height: 60px;
+		}
+
+		.text-md {
+			font-size: 48px;
+			line-height: 72px;
+		}
+
+		.text-xl {
+			font-size: 60px;
+			line-height: 84px;
+		}
+
+		.text-2xl {
+			font-size: 72px;
+			line-height: 96px;
+		}
+
+		.text-4xl {
+			font-size: 108px;
+			line-height: 120px;
+		}
+
+		.text-6xl {
+			font-size: 180px;
+			line-height: 198px;
+		}
+
+		.text-8xl {
+			font-size: 288px;
+			line-height: 352px;
 		}
 	}
 }

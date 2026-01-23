@@ -10,6 +10,10 @@
 	let footerEl: Element | undefined = $state();
 
 	const large = new MediaQuery('min-width: 1536px');
+	const xlarge = new MediaQuery('min-width: 2560px');
+
+	let pointingArrowSize = $derived(() => (xlarge.current ? 16 : large.current ? 12 : 8));
+	let arrowSize = $derived(() => (xlarge.current ? 64 : large.current ? 48 : 32));
 
 	const handleTitleIntersection = (entry: IntersectionObserverEntry) => {
 		if (entry.isIntersecting) {
@@ -45,7 +49,7 @@
 		{@attach intersectionObserverAttachment(handleFlowersIntersection)}
 	/>
 	<div
-		class="absolute top-[calc(100vh-64px)] flex flex-col p-4 opacity-100 transition duration-600 ease-in-out 2xl:top-[calc(100vh-128px)] 2xl:p-8"
+		class="absolute top-[calc(100vh-64px)] flex flex-col p-4 opacity-100 transition duration-600 ease-in-out 3xl:top-[calc(100vh-128px)] 3xl:p-8"
 		bind:this={footerEl}
 	>
 		<span class="text-xs">powered by ezzy!</span>
@@ -55,14 +59,14 @@
 		<div class="relative">
 			<Tilt class="transition duration-500 hover:scale-110">
 				<h1
-					class="font-bagel my-8 w-fit bg-linear-to-r from-violet-300 via-violet-400 to-violet-500 bg-clip-text p-4 text-8xl text-transparent transition ease-out"
+					class="font-bagel my-8 w-fit bg-linear-to-r from-violet-300 via-violet-400 to-violet-500 bg-clip-text p-4 text-8xl text-transparent transition ease-out 3xl:my-16"
 					{@attach intersectionObserverAttachment(handleTitleIntersection)}
 				>
 					ezzy.dog
 				</h1>
 			</Tilt>
-			<div class="absolute bottom-4 left-2/3 flex h-6 items-center gap-2 2xl:h-10">
-				<CornerLeftUp size={large ? 16 : 8} />
+			<div class="absolute bottom-4 left-2/3 flex h-6 items-center gap-2 3xl:h-10">
+				<CornerLeftUp size={pointingArrowSize()} />
 				<span class="self-end text-xs">(hover me!)</span>
 			</div>
 		</div>
@@ -71,7 +75,7 @@
 
 			<h3 class="text-xl">scroll down to learn about me and some of my projects!</h3>
 			<a href="#about" aria-label="Scroll to About Me" class="text-violet-400">
-				<ArrowBigDown size={large ? 64 : 32} />
+				<ArrowBigDown size={arrowSize()} />
 			</a>
 		</div>
 	</div>

@@ -12,6 +12,9 @@
 	import pnpmlogo from '$lib/assets/logos/pnpmlogo.svg';
 
 	const large = new MediaQuery('min-width: 1536px');
+	const xlarge = new MediaQuery('min-width: 2560px');
+
+	const arrowSize = $derived(() => (xlarge.current ? 64 : large.current ? 48 : 32));
 
 	const images = [
 		{ src: pnpmlogo, alt: 'logo for pnpm', name: 'pnpm' },
@@ -22,7 +25,7 @@
 
 	let emblaApi: any = $state();
 
-	let options: EmblaOptionsType = { loop: true, duration: 25 };
+	let options: EmblaOptionsType = { loop: true, duration: 25, slidesToScroll: 1, align: 'center' };
 	let plugins = [Autoplay()];
 
 	const onInit = (event: CustomEvent) => {
@@ -34,9 +37,11 @@
 <div
 	class="relative my-auto flex max-h-400 w-full flex-1 flex-row items-center justify-center overflow-hidden py-8"
 >
-	<div class="absolute left-0 h-[35vw] max-h-full w-full rounded-full bg-violet-400">
+	<div
+		class="absolute left-0 flex h-[35vw] max-h-full w-full items-center justify-center rounded-full bg-violet-400"
+	>
 		<div
-			class="font-cal flex h-full flex-col items-center justify-center gap-4 pt-12 pr-16 pl-[47vw] 2xl:gap-8 2xl:pt-24 2xl:pr-32"
+			class="font-cal flex h-full flex-col items-center justify-center gap-4 pt-12 pr-16 pl-[47vw] 3xl:max-w-7/8 3xl:gap-8 3xl:pt-24 3xl:pr-32 3xl:pl-[40vw]"
 		>
 			<span class="text-md">
 				I'm a front-end developer with a passion for building intuitive, robust interfaces and
@@ -48,33 +53,34 @@
 				projects I have developed below!</span
 			>
 			<a href="#projects" aria-label="Scroll to Projects" class="text-violet-200">
-				<ArrowBigDown size={large ? 64 : 32} />
+				<ArrowBigDown size={arrowSize()} />
 			</a>
 		</div>
 	</div>
 	<div
-		class="absolute left-0 flex aspect-square h-[40vw] max-h-full flex-col items-center justify-start gap-8 rounded-full border-2 border-white bg-violet-300 p-12 2xl:gap-16 2xl:border-4 2xl:p-24"
+		class="absolute left-0 flex aspect-square h-[40vw] max-h-full flex-col items-center justify-start gap-8 rounded-full border-2 border-white bg-violet-300 p-12 3xl:gap-16 3xl:border-4 3xl:p-24"
 	>
 		<div
-			class="font-cal flex aspect-square h-full min-w-0 flex-col items-center justify-center gap-4 2xl:gap-8"
+			id="foobar"
+			class="font-cal flex aspect-square h-full min-w-0 flex-col items-center justify-center gap-4 3xl:gap-8 4xl:gap-16"
 		>
-			<div class="flex flex-col items-center pb-4 2xl:pb-8">
+			<div class="flex flex-col items-center pb-4 3xl:pb-8">
 				<span class="text-center text-sm text-white">(some of)</span>
 				<h2 class="text-center text-4xl text-black">my favorite techs</h2>
 			</div>
-			<div class="embla max-w-full">
+			<div class="embla max-w-full px-16 3xl:px-32">
 				<div
 					class="overflow-hidden"
 					onemblaInit={onInit}
 					use:useEmblaCarousel={{ options, plugins }}
 				>
-					<div class="flex touch-pan-y touch-pinch-zoom gap-24">
+					<div class="flex w-full touch-pan-y touch-pinch-zoom">
 						{#each images as image (image.src)}
-							<div class="flex shrink-0 flex-col items-center gap-8 last:mr-24">
+							<div class="flex w-full shrink-0 flex-col items-center gap-8">
 								<img
 									src={image.src}
 									alt={image.alt}
-									class="h-40 w-40 shrink-0"
+									class="h-48 w-full object-contain 4xl:h-96"
 									loading="eager"
 									decoding="sync"
 								/>
@@ -86,9 +92,9 @@
 			</div>
 		</div>
 		<img
+			class="absolute top-1/2 -right-[10vw] z-10 w-[10vw] -translate-x-1/2 -translate-y-1/2"
 			src={flower2}
 			alt="separating flower"
-			class="absolute top-1/2 -right-[10vw] z-10 w-[10vw] -translate-x-1/2 -translate-y-1/2"
 		/>
 	</div>
 </div>

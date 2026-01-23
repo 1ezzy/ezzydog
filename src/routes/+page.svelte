@@ -16,13 +16,13 @@
 	<img
 		src={flower1}
 		alt="separating flower"
-		class="absolute top-[100vh] left-1/2 z-10 w-32 -translate-x-1/2 -translate-y-1/2"
+		class="absolute top-[100vh] left-1/2 z-10 w-[10vw] -translate-x-1/2 -translate-y-1/2"
 	/>
 	<AboutMe />
 	<img
 		src={flower3}
 		alt="second separating flower"
-		class="absolute top-[calc(200vh+160px)] left-1/2 z-10 w-32 -translate-x-1/2 -translate-y-1/2"
+		class="absolute top-[calc(215vh)] left-1/2 z-10 w-[10vw] -translate-x-1/2 -translate-y-1/2"
 	/>
 	<Projects />
 </main>

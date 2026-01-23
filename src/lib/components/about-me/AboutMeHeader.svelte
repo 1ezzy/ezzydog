@@ -4,6 +4,9 @@
 	import { intersectionObserverAttachment } from '$lib/utils/attachments';
 
 	const large = new MediaQuery('min-width: 1536px');
+	const xlarge = new MediaQuery('min-width: 2560px');
+
+	const iconSize = $derived(() => (xlarge.current ? 32 : large.current ? 24 : 16));
 
 	const handleLinkIntersection = (entry: IntersectionObserverEntry) => {
 		if (entry.isIntersecting) {
@@ -17,7 +20,7 @@
 </script>
 
 <div class="mb-16 flex flex-row items-center justify-between">
-	<h2 id="about" class="pt-16 text-6xl">About Me</h2>
+	<h2 id="about" class="pt-16 text-4xl">About Me</h2>
 	<div class="flex flex-row items-center gap-8 pt-16">
 		<a
 			class="rounded-full p-4 transition ease-in-out hover:bg-rose-300"
@@ -28,7 +31,7 @@
 				class="flex flex-row items-center gap-4 transition delay-200 duration-300 ease-in-out"
 				{@attach intersectionObserverAttachment(handleLinkIntersection)}
 			>
-				<Linkedin size={large ? 32 : 16} />
+				<Linkedin size={iconSize()} />
 				<span class="text-xl">LinkedIn</span>
 			</div>
 		</a>
@@ -45,7 +48,7 @@
 				class="flex flex-row items-center gap-4 transition delay-300 duration-300 ease-in-out"
 				{@attach intersectionObserverAttachment(handleLinkIntersection)}
 			>
-				<Github size={large ? 32 : 16} />
+				<Github size={iconSize()} />
 				<span class="text-xl">GitHub</span>
 			</div>
 		</a>
@@ -61,7 +64,7 @@
 				class="flex flex-row items-center gap-4 transition delay-400 duration-400 ease-in-out"
 				{@attach intersectionObserverAttachment(handleLinkIntersection)}
 			>
-				<Mail size={large ? 32 : 16} />
+				<Mail size={iconSize()} />
 				<span class="text-xl">Email</span>
 			</div>
 		</a>
