@@ -57,7 +57,7 @@
 	</div>
 	<div class="flex w-full flex-col items-center justify-center gap-12">
 		<div class="relative">
-			<Tilt class="transition duration-500 hover:scale-110">
+			<Tilt class="cursor-pointer transition duration-500 hover:scale-110">
 				<h1
 					class="font-bagel my-8 w-fit bg-linear-to-r from-violet-300 via-violet-400 to-violet-500 bg-clip-text p-4 text-8xl text-transparent transition ease-out 3xl:my-16"
 					{@attach intersectionObserverAttachment(handleTitleIntersection)}
@@ -74,7 +74,11 @@
 			<h2 class="text-4xl">a portfolio project by Jordan</h2>
 
 			<h3 class="text-xl">scroll down to learn about me and some of my projects!</h3>
-			<a href="#about" aria-label="Scroll to About Me" class="text-violet-400">
+			<a
+				href="#about"
+				aria-label="Scroll to About Me"
+				class="mt-4 flex items-center rounded-full p-2 text-violet-400 hover-fade-in hover:bg-violet-400 hover:text-white 3xl:mt-8"
+			>
 				<ArrowBigDown size={arrowSize()} />
 			</a>
 		</div>

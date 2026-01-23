@@ -41,18 +41,25 @@
 		class="absolute left-0 flex h-[35vw] max-h-full w-full items-center justify-center rounded-full bg-violet-400"
 	>
 		<div
-			class="font-cal flex h-full flex-col items-center justify-center gap-4 pt-12 pr-16 pl-[47vw] 3xl:max-w-7/8 3xl:gap-8 3xl:pt-24 3xl:pr-32 3xl:pl-[40vw]"
+			class="flex h-full flex-col items-center justify-between py-10 pr-32 pl-[47vw] 3xl:max-w-7/8 3xl:gap-8 3xl:py-20 3xl:pr-64 3xl:pl-[40vw]"
 		>
-			<span class="text-md">
-				I'm a front-end developer with a passion for building intuitive, robust interfaces and
-				tackling complex technical challenges. I love taking on new projects as a way to learn and
-				enjoy exploring new ideas by writing code!
-			</span>
-			<span class="text-md">
-				Check out my resume and some of my favorite technologies to the right along with some of the
-				projects I have developed below!</span
+			<span></span>
+			<div class="font-cal flex flex-col items-center gap-4">
+				<span class="text-md">
+					I'm a front-end developer with a passion for building intuitive, robust interfaces and
+					tackling complex technical challenges. I love taking on new projects as a way to learn and
+					enjoy exploring new ideas by writing code!
+				</span>
+				<span class="text-md">
+					Check out my resume and some of my favorite technologies to the right along with some of
+					the projects I have developed below!</span
+				>
+			</div>
+			<a
+				href="#projects"
+				aria-label="Scroll to Projects"
+				class="rounded-full p-2 text-violet-200 hover-fade-in hover:bg-violet-300 hover:text-white"
 			>
-			<a href="#projects" aria-label="Scroll to Projects" class="text-violet-200">
 				<ArrowBigDown size={arrowSize()} />
 			</a>
 		</div>
