@@ -8,6 +8,9 @@
 
 	import tslogo from '$lib/assets/logos/ts.svg';
 	import sveltelogo from '$lib/assets/logos/svelte.svg';
+	import tailwindlogo from '$lib/assets/logos/tailwind.svg';
+	import pnpmlogo from '$lib/assets/logos/pnpm.svg';
+	import zodlogo from '$lib/assets/logos/zod.svg';
 	import mongodblogo from '$lib/assets/logos/mongodb.svg';
 	import prismalogo from '$lib/assets/logos/prisma.svg';
 	import cloudflareworkerslogo from '$lib/assets/logos/cloudflareworkers.svg';
@@ -43,7 +46,7 @@
 		name: 'Cauldron',
 		shortDesc: 'A DND5e Spellbook Generator',
 		longDesc:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+			'Cauldron streamlines spell management for D&D 5e players. Search and filter the entire spell library, then organize spells into custom spellbooks for each character. All your spell details live on one page, so you can focus on gameplay instead of flipping through rulebooks.',
 		url: 'https://github.com/1ezzy/cauldron',
 		slug: 'cauldron'
 	};
@@ -60,6 +63,21 @@
 			name: 'SvelteKit'
 		},
 		{
+			src: tailwindlogo,
+			alt: 'tailwindcss logo',
+			name: 'TailwindCSS'
+		},
+		{
+			src: zodlogo,
+			alt: 'zod logo',
+			name: 'Zod'
+		},
+		{
+			src: pnpmlogo,
+			alt: 'pnpm logo',
+			name: 'pnpm'
+		},
+		{
 			src: mongodblogo,
 			alt: 'mongodb logo',
 			name: 'MongoDB'
@@ -72,7 +90,7 @@
 		{
 			src: cloudflareworkerslogo,
 			alt: 'cloudflare workers logo',
-			name: 'Cloudflare Workers'
+			name: 'Cloudflare'
 		}
 	];
 </script>

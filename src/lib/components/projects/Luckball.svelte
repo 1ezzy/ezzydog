@@ -7,13 +7,19 @@
 
 	import tslogo from '$lib/assets/logos/ts.svg';
 	import sveltelogo from '$lib/assets/logos/svelte.svg';
+	import tailwindlogo from '$lib/assets/logos/tailwind.svg';
+	import drizzlelogo from '$lib/assets/logos/drizzle.svg';
+	import lucialogo from '$lib/assets/logos/lucia.svg';
+	import dockerlogo from '$lib/assets/logos/docker.svg';
+	import nginxlogo from '$lib/assets/logos/nginx.svg';
+	import digitaloceanlogo from '$lib/assets/logos/digitalocean.svg';
 
 	const images: { src: string; alt: string; description: string }[] = [
 		{
 			src: luckballjoin,
 			alt: 'form to join a week of luckball',
 			description:
-				'Users can enter their name and join a week of Luckball. After Joining, wait until the week starts, where they are auto assigned a random Luckball team with 16 NFL teams.'
+				'Users can enter their name and join a week of Luckball. After joining, wait until the week starts, where they are auto assigned a random Luckball team with 16 NFL teams.'
 		},
 		{
 			src: luckballschedule,
@@ -33,7 +39,7 @@
 		name: 'Luckball',
 		shortDesc: 'A Weekly Football Team Randomizer',
 		longDesc:
-			'Luckball is an application that sorts matchups from each week of the National Football League schedule across two randomized teams. Each team in Luckball contains one NFL team from each matchup for the week, and teams in Luckball score as their NFL teams score. The Luckball team with the highest combined score wins the week! This app is a great way to compete with your friends and always ensures you have a team to root for and bet on.',
+			"Luckball transforms NFL weekly matchups into a fantasy-style competition. Each week, the app randomly assigns one team from every matchup to two competing sides. As real games unfold, your side's score combines points from all your assigned teams, and the highest total wins. It's a fresh way to stay invested in every game and compete with friends each NFL Sunday.",
 		url: 'https://github.com/1ezzy/luckball',
 		slug: 'luckball'
 	};
@@ -48,6 +54,36 @@
 			src: sveltelogo,
 			alt: 'sveltekit logo',
 			name: 'SvelteKit'
+		},
+		{
+			src: tailwindlogo,
+			alt: 'tailwindcss logo',
+			name: 'TailwindCSS'
+		},
+		{
+			src: drizzlelogo,
+			alt: 'drizzle ORM logo',
+			name: 'Drizzle'
+		},
+		{
+			src: lucialogo,
+			alt: 'lucia auth logo',
+			name: 'Lucia'
+		},
+		{
+			src: dockerlogo,
+			alt: 'docker logo',
+			name: 'Docker'
+		},
+		{
+			src: nginxlogo,
+			alt: 'nginx logo',
+			name: 'nginx'
+		},
+		{
+			src: digitaloceanlogo,
+			alt: 'digital ocean logo',
+			name: 'DigitalOcean'
 		}
 	];
 </script>

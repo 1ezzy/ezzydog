@@ -53,21 +53,23 @@
 				class:left-2={reverse}
 				bind:clientWidth={purpleWidth}
 			></div>
-			<div class="relative z-10 flex h-[40vh] flex-col gap-8 p-8 3xl:gap-16 3xl:p-16">
+			<div
+				class="relative z-10 flex h-[40vh] flex-col gap-8 p-8 3xl:gap-12 3xl:p-12 4xl:gap-16 4xl:p-16"
+			>
 				<div class="flex flex-1 basis-1/2 flex-col gap-4 3xl:gap-8">
 					<div class="flex flex-row items-center gap-2 3xl:gap-4">
 						<h2 class="text-4xl text-white">{projectDetails.name}</h2>
-						<span class="text-white"> - </span>
+						<span class="text-2xl text-white"> - </span>
 						<h3 class="text-2xl text-white">{projectDetails.shortDesc}</h3>
 					</div>
-					<span class="font-cal text-md">{projectDetails.longDesc}</span>
+					<span class="font-cal text-sm">{projectDetails.longDesc}</span>
 					<div
-						class="flex h-full items-center justify-between gap-8 3xl:gap-16"
+						class="mt-auto flex items-center justify-between gap-8 3xl:gap-16"
 						class:flex-row-reverse={reverse}
 					>
 						<a
 							href={projectDetails.url}
-							class="flex items-center justify-center gap-3 rounded-full bg-violet-400 p-4 hover-fade-in hover:bg-violet-500 3xl:gap-6 3xl:p-8"
+							class="flex items-center justify-center gap-3 rounded-full bg-violet-400 p-4 hover-fade-in hover:bg-violet-500 3xl:gap-6 3xl:p-6 4xl:p-8"
 						>
 							<Github size={iconSize()} />
 							<span class="text-sm">View on GitHub</span>
@@ -76,15 +78,17 @@
 							<img
 								alt="GitHub Created At"
 								src="https://img.shields.io/github/created-at/1ezzy/{projectDetails.slug}?style=flat-square&logo=github&logoSize=auto"
+								class="h-4 3xl:h-8 4xl:h-12"
 							/>
-
 							<img
 								alt="GitHub commit activity"
 								src="https://img.shields.io/github/commit-activity/t/1ezzy/{projectDetails.slug}?style=flat-square&logo=github&logoSize=auto"
+								class="h-4 3xl:h-8 4xl:h-12"
 							/>
 							<img
 								alt="GitHub language count"
 								src="https://img.shields.io/github/languages/count/1ezzy/{projectDetails.slug}?style=flat-square&logo=github&logoSize=auto"
+								class="h-4 3xl:h-8 4xl:h-12"
 							/>
 						</div>
 					</div>
@@ -138,8 +142,8 @@
 {/snippet}
 
 {#snippet darkPurpleBoxes()}
-	<div class="flex-1">
-		<div class="relative min-w-0">
+	<div class="max-w-full flex-1">
+		<div class="relative h-full max-w-full min-w-0">
 			<div
 				class="absolute top-2 h-[20vh] w-full bg-purple-400"
 				class:left-2={!reverse}
@@ -162,24 +166,29 @@
 					style={`width: ${purpleWidth}px`}
 				>
 					<div class="flex h-full items-center justify-between px-6 py-4 3xl:px-12 3xl:py-8">
-						<h3 class="text-2xl">Some of the tech involved in this project</h3>
+						<h3 class="text-2xl text-white">Project Tools</h3>
 						<img class="w-10" src={flower4} alt="header flower" />
 					</div>
 				</div>
 			</div>
-
-			<div class="relative z-10 flex flex-col gap-8 p-8 3xl:gap-16 3xl:p-16">
-				<div class="flex basis-1/2 flex-col gap-4 3xl:gap-8">
-					<div class="flex flex-wrap gap-12 3xl:gap-24">
+			<div
+				class="relative z-10 flex h-[20vh] flex-col gap-8 px-8 py-4 3xl:gap-16 3xl:px-12 3xl:py-6 4xl:px-16 4xl:py-8"
+			>
+				<div class="flex h-full flex-col gap-4 3xl:gap-8">
+					<div
+						class="flex h-full w-full gap-4 3xl:gap-6 4xl:gap-8"
+						class:justify-start={!reverse}
+						class:justify-end={reverse}
+					>
 						{#each techs as tech}
 							<div
-								class="flex max-h-28 max-w-16 flex-col items-center justify-center gap-2 3xl:max-h-56 3xl:max-w-32"
+								class="flex aspect-square h-full max-h-full w-full min-w-0 flex-col items-center justify-center gap-2 overflow-hidden 4xl:h-70"
 							>
 								<Shine>
 									<img
 										src={tech.src}
 										alt={tech.alt}
-										class="h-16 w-16 object-contain 3xl:h-32 3xl:w-32"
+										class="h-16 w-16 object-contain 3xl:h-24 3xl:w-24 4xl:h-32 4xl:w-32"
 										loading="eager"
 										decoding="sync"
 									/>
@@ -196,12 +205,12 @@
 	</div>
 {/snippet}
 
-<div class="flex h-[50vh] flex-1 flex-col gap-14 3xl:gap-28">
-	<div class="flex h-fit gap-16 3xl:gap-32" class:flex-row-reverse={reverse}>
+<div class="flex max-w-full flex-auto flex-col gap-14 3xl:gap-28">
+	<div class="flex h-fit min-h-0 gap-16 3xl:gap-32" class:flex-row-reverse={reverse}>
 		{@render purpleRectangle()}
 		{@render whiteSquare()}
 	</div>
-	<div class="flex h-full">
+	<div class="flex h-full min-h-0 flex-1">
 		{@render darkPurpleBoxes()}
 	</div>
 </div>
