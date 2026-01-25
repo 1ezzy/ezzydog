@@ -5,7 +5,7 @@
 	import Autoplay from 'embla-carousel-autoplay';
 	import type { EmblaOptionsType } from 'embla-carousel';
 
-	import flower2 from '$lib/assets/flower2.png';
+	import flower2 from '$lib/assets/flowers/flower2.png';
 	import sveltelogo from '$lib/assets/logos/svelte.svg';
 	import tslogo from '$lib/assets/logos/ts.svg';
 	import tailwindlogo from '$lib/assets/logos/tailwind.svg';

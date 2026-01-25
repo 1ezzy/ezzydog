@@ -4,7 +4,7 @@
 	import { ArrowBigDown, CornerLeftUp } from '@lucide/svelte';
 	import { intersectionObserverAttachment } from '$lib/utils/attachments';
 
-	import flowers from '$lib/assets/flowers.png';
+	import flowers from '$lib/assets/flowers/flowers.png';
 
 	let footerEl: Element | undefined = $state();
 

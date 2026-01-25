@@ -3,8 +3,8 @@
 	import HeroSection from '$lib/components/HeroSection.svelte';
 	import Projects from '$lib/components/Projects.svelte';
 
-	import flower1 from '$lib/assets/flower1.png';
-	import flower3 from '$lib/assets/flower3.png';
+	import flower1 from '$lib/assets/flowers/flower1.png';
+	import flower3 from '$lib/assets/flowers/flower3.png';
 </script>
 
 <svelte:head>
