@@ -10,7 +10,7 @@
 
 	const links: { href: string; icon: Component; label: string }[] = [
 		{
-			href: '/src/lib/assets/resume.pdf',
+			href: '',
 			icon: FileText,
 			label: 'Resume (Download)'
 		},
