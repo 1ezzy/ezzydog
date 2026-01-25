@@ -26,6 +26,6 @@
 	/>
 	<Projects />
 </main>
-<footer class="flex w-full justify-center p-4 pb-8 3xl:pb-16">
+<footer class="flex w-full justify-center p-4 pt-32 pb-8 3xl:pt-64 3xl:pb-16">
 	<span>Thanks for visiting!</span>
 </footer>

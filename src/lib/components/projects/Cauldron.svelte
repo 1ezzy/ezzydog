@@ -6,10 +6,11 @@
 	import spellbooks from '$lib/assets/projects/cauldron/spellbooks.png';
 	import spelltable from '$lib/assets/projects/cauldron/spelltable.png';
 
-	import tslogo from '$lib/assets/logos/tslogo.svg';
-	import sveltelogo from '$lib/assets/logos/sveltelogo.svg';
-	import mongodblogo from '$lib/assets/logos/mongodblogo.svg';
-	import prismalogo from '$lib/assets/logos/prismalogo.svg';
+	import tslogo from '$lib/assets/logos/ts.svg';
+	import sveltelogo from '$lib/assets/logos/svelte.svg';
+	import mongodblogo from '$lib/assets/logos/mongodb.svg';
+	import prismalogo from '$lib/assets/logos/prisma.svg';
+	import cloudflareworkerslogo from '$lib/assets/logos/cloudflareworkers.svg';
 
 	const images: { src: string; alt: string; description: string }[] = [
 		{
@@ -42,7 +43,8 @@
 		name: 'Cauldron',
 		shortDesc: 'A DND5e Spellbook Generator',
 		longDesc:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+		url: 'https://github.com/1ezzy/cauldron'
 	};
 
 	const techs = [
@@ -65,8 +67,13 @@
 			src: prismalogo,
 			alt: 'prisma logo',
 			name: 'Prisma'
+		},
+		{
+			src: cloudflareworkerslogo,
+			alt: 'cloudflare workers logo',
+			name: 'Cloudflare Workers'
 		}
 	];
 </script>
 
-<ProjectBase {images} {projectDetails} {techs} />
+<ProjectBase {images} {projectDetails} {techs} reverse={false} />

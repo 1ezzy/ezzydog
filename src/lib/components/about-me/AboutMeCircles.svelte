@@ -6,10 +6,10 @@
 	import type { EmblaOptionsType } from 'embla-carousel';
 
 	import flower2 from '$lib/assets/flower2.png';
-	import sveltelogo from '$lib/assets/logos/sveltelogo.svg';
-	import tslogo from '$lib/assets/logos/tslogo.svg';
-	import tailwindlogo from '$lib/assets/logos/tailwindlogo.svg';
-	import pnpmlogo from '$lib/assets/logos/pnpmlogo.svg';
+	import sveltelogo from '$lib/assets/logos/svelte.svg';
+	import tslogo from '$lib/assets/logos/ts.svg';
+	import tailwindlogo from '$lib/assets/logos/tailwind.svg';
+	import pnpmlogo from '$lib/assets/logos/pnpm.svg';
 
 	const large = new MediaQuery('min-width: 1536px');
 	const xlarge = new MediaQuery('min-width: 2560px');

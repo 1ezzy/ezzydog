@@ -11,7 +11,7 @@
 	const large = new MediaQuery('min-width: 1536px');
 	const xlarge = new MediaQuery('min-width: 2560px');
 
-	let pointingArrowSize = $derived(() => (xlarge.current ? 16 : large.current ? 12 : 8));
+	let pointingArrowSize = $derived(() => (xlarge.current ? 24 : large.current ? 18 : 12));
 	let arrowSize = $derived(() => (xlarge.current ? 64 : large.current ? 48 : 32));
 
 	const handleTitleIntersection = (entry: IntersectionObserverEntry) => {
